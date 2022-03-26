@@ -84,7 +84,7 @@ foreach(SOURCE_MODULE ${MODULES_MODULE_LIST})
     ConfigureElunaModule(${SOURCE_MODULE})
   endif()
 
-  if (SOURCE_MODULE MATCHES "mod-playerbots")
+  if (SOURCE_MODULE MATCHES "mod_playerbots")
     set(MOD_PLAYERBOTS_FOUND 1)
     target_compile_options(database
       PRIVATE
