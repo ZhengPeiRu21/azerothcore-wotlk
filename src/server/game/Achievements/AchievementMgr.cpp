@@ -2179,8 +2179,10 @@ void AchievementMgr::RemoveTimedAchievement(AchievementCriteriaTimedTypes type, 
 
 void AchievementMgr::CompletedAchievement(AchievementEntry const* achievement)
 {
+#ifdef MOD_PLAYERBOTS
     if (m_player->GetSession()->IsBot())
         return;
+#endif
     // disable for gamemasters with GM-mode enabled
     if (m_player->IsGameMaster())
     {
